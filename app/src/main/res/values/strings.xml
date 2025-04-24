@@ -2,4 +2,5 @@
     <string name="app_name">FancyGallery</string>
     <string name="gallery">Gallery</string>
     <string name="map">Map</string>
+    <string name="gallery_description">The photos from Flicker</string>
 </resources>

@@ -25,12 +25,12 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments["clearPackageData"] = "true"
 
-//        val apikeyProperties = readProperties(file("../apikey.properties"))
-//        buildConfigField(
-//            "String",
-//            "FLICKR_API_KEY",
-//            apikeyProperties["FLICKR_API_KEY"] as String
-//        )
+        val apikeyProperties = readProperties(file("../apikey.properties"))
+        buildConfigField(
+            "String",
+            "FLICKR_API_KEY",
+            apikeyProperties["FLICKR_API_KEY"] as String
+        )
 
     }
 
