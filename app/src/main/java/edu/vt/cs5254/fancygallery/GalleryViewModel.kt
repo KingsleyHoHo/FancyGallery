@@ -20,7 +20,7 @@ class GalleryViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             try {
-                val items = photoRepository.fetchPhotos()
+                val items = photoRepository.fetchPhotos(48)
                 Log.d(TAG, "Items received: $items")
                 _galleryItems.value = items
             } catch (ex: Exception) {
