@@ -8,11 +8,24 @@
     <fragment
         android:id="@+id/gallery_fragment"
         android:name="edu.vt.cs5254.fancygallery.GalleryFragment"
-        tools:layout="@layout/fragment_gallery"
-        android:label="GalleryFragment" />
+        android:label="GalleryFragment"
+        tools:layout="@layout/fragment_gallery">
+        <action
+            android:id="@+id/show_photo"
+            app:destination="@id/photoPageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/map_fragment"
         android:name="edu.vt.cs5254.fancygallery.MapFragment"
-        tools:layout="@layout/fragment_map"
-        android:label="MapFragment" />
+        android:label="MapFragment"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/photoPageFragment"
+        android:name="edu.vt.cs5254.fancygallery.PhotoPageFragment"
+        android:label="PhotoPageFragment"
+        android:layout="@layout/fragment_photo_page">
+        <argument
+            android:name="photoPageUri"
+            app:argType="android.net.Uri" />
+    </fragment>
 </navigation>
