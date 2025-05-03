@@ -10,7 +10,7 @@ interface FlickrApi {
                 "&api_key=${BuildConfig.FLICKR_API_KEY}" +
                 "&format=json" +
                 "&nojsoncallback=1" +
-                "&extras=url_s"
+                "&extras=url_s,geo"
     )
     suspend fun fetchPhotos(
         @Query("per_page") perPage: Int = 50

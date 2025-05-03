@@ -12,7 +12,13 @@ import edu.vt.cs5254.fancygallery.databinding.ListItemGalleryBinding
 class GalleryItemHolder(
     private val binding: ListItemGalleryBinding
 ) : RecyclerView.ViewHolder(binding.root) {
+
+    lateinit var boundGalleryItem: GalleryItem
+        private set
+
     fun bind(galleryItem: GalleryItem, onItemClicked: (Uri) -> Unit) {
+        boundGalleryItem = galleryItem
+
         binding.itemImageView.load(galleryItem.url) {
             placeholder(R.drawable.ic_placeholder)
             diskCachePolicy(CachePolicy.DISABLED)
